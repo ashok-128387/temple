@@ -134,18 +134,18 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-20 left-0 right-0 bg-card/95 backdrop-blur-md border-b border-border animate-fadeInDown">
+          <div className="md:hidden absolute top-20 left-0 right-0 bg-white border-b border-gray-200 shadow-lg animate-fadeInDown">
             <div className="flex flex-col gap-4 px-4 py-6">
               <Link
                 href="/"
-                className="text-sm font-light tracking-wider hover:text-primary transition-colors"
+                className="text-sm font-light tracking-wider text-black hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/#about"
-                className="text-sm font-light tracking-wider hover:text-primary transition-colors"
+                className="text-sm font-light tracking-wider text-black hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
@@ -155,7 +155,7 @@ export default function Header() {
               <div>
                 <button
                   onClick={() => setIsDeekshaOpen(!isDeekshaOpen)}
-                  className="text-sm font-light tracking-wider hover:text-primary transition-colors flex items-center gap-1 w-full"
+                  className="text-sm font-light tracking-wider text-black hover:text-primary transition-colors flex items-center gap-1 w-full"
                 >
                   Ayyappa Deeksha
                   <ChevronDown size={16} className={`transition-transform duration-300 ${isDeekshaOpen ? 'rotate-180' : ''}`} />
@@ -166,7 +166,7 @@ export default function Header() {
                       <Link
                         key={item.label}
                         href={item.href}
-                        className="text-sm font-light tracking-wider hover:text-primary transition-colors"
+                        className="text-sm font-light tracking-wider text-black hover:text-primary transition-colors"
                         onClick={() => {
                           setIsMenuOpen(false)
                           setIsDeekshaOpen(false)
@@ -183,7 +183,7 @@ export default function Header() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-light tracking-wider hover:text-primary transition-colors"
+                  className="text-sm font-light tracking-wider text-black hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}

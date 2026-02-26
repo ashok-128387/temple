@@ -170,9 +170,8 @@ export default function Home() {
                   controls
                   autoPlay
                   muted={isMuted}
-                  poster="/temple/Padhinettam Thirupadi🙏🏻♥️SWAMIYE SARANAM AYYAPPA 🙏🏻➡️ FOLLOW @sabarimala_ayyappa #sabarimal.webp"
                 >
-                  <source src="/temple/Ayyappa 🙏🏻#sabarimalasannidhanam.mp4" type="video/mp4" />
+                  <source src="/temple/v3.mp4" type="video/mp4" />
                 </video>
                 <button
                   onClick={() => setIsMuted(!isMuted)}

@@ -20,37 +20,28 @@ export default function Footer() {
           <div>
             <h4 className="font-serif font-bold mb-6 uppercase tracking-widest" style={{ color: '#000000', fontSize: '15px' }}>About</h4>
             <ul className="space-y-3">
-              {['Our Story', 'Mission & Vision', 'Leadership', 'Heritage'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="font-light hover:text-primary transition-colors" style={{ color: '#000000', fontSize: '15px' }}>
-                    {link}
-                  </a>
-                </li>
-              ))}
+              <li><Link href="/#about" className="font-light hover:text-primary transition-colors" style={{ color: '#000000', fontSize: '15px' }}>Our Story</Link></li>
+              <li><Link href="/#about" className="font-light hover:text-primary transition-colors" style={{ color: '#000000', fontSize: '15px' }}>Mission & Vision</Link></li>
+              <li><Link href="/#priests" className="font-light hover:text-primary transition-colors" style={{ color: '#000000', fontSize: '15px' }}>Leadership</Link></li>
+              <li><Link href="/#about" className="font-light hover:text-primary transition-colors" style={{ color: '#000000', fontSize: '15px' }}>Heritage</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="font-serif font-bold mb-6 uppercase tracking-widest" style={{ color: '#000000', fontSize: '15px' }}>Services</h4>
             <ul className="space-y-3">
-              {['Daily Puja', 'Ceremonies', 'Guidance', 'Events'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="font-light hover:text-primary transition-colors" style={{ color: '#000000', fontSize: '15px' }}>
-                    {link}
-                  </a>
-                </li>
-              ))}
+              <li><Link href="/#services" className="font-light hover:text-primary transition-colors" style={{ color: '#000000', fontSize: '15px' }}>Daily Puja</Link></li>
+              <li><Link href="/#services" className="font-light hover:text-primary transition-colors" style={{ color: '#000000', fontSize: '15px' }}>Ceremonies</Link></li>
+              <li><Link href="/#services" className="font-light hover:text-primary transition-colors" style={{ color: '#000000', fontSize: '15px' }}>Guidance</Link></li>
+              <li><Link href="/#events" className="font-light hover:text-primary transition-colors" style={{ color: '#000000', fontSize: '15px' }}>Events</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="font-serif font-bold mb-6 uppercase tracking-widest" style={{ color: '#000000', fontSize: '15px' }}>Community</h4>
             <ul className="space-y-3">
-              {['Events', 'Gallery', 'Blog', 'Newsletter'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="font-light hover:text-primary transition-colors" style={{ color: '#000000', fontSize: '15px' }}>
-                    {link}
-                  </a>
-                </li>
-              ))}
+              <li><Link href="/#events" className="font-light hover:text-primary transition-colors" style={{ color: '#000000', fontSize: '15px' }}>Events</Link></li>
+              <li><Link href="/#gallery" className="font-light hover:text-primary transition-colors" style={{ color: '#000000', fontSize: '15px' }}>Gallery</Link></li>
+              <li><Link href="/#blog" className="font-light hover:text-primary transition-colors" style={{ color: '#000000', fontSize: '15px' }}>Blog</Link></li>
+              <li><Link href="/#contact" className="font-light hover:text-primary transition-colors" style={{ color: '#000000', fontSize: '15px' }}>Newsletter</Link></li>
             </ul>
           </div>
           <div>
