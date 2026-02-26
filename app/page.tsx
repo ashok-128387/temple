@@ -11,6 +11,8 @@ export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
   const [isMuted, setIsMuted] = useState(true)
+  const [openDropdown, setOpenDropdown] = useState(false)
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false)
 
   const heroImages = [
     '/temple/565090714_18080753051283913_5599229946113706496_n.jpg',
@@ -70,16 +72,59 @@ export default function Home() {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="text-sm font-light tracking-wider hover:text-primary transition-colors duration-300 relative group"
-                >
-                  {link.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-300"></span>
-                </Link>
-              ))}
+              <Link href="#home" className="text-sm font-light tracking-wider hover:text-primary transition-colors duration-300 relative group">
+                Home
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <Link href="#about" className="text-sm font-light tracking-wider hover:text-primary transition-colors duration-300 relative group">
+                About
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              
+              {/* Ayyappa Deeksha Dropdown */}
+              <div className="relative" onMouseEnter={() => setOpenDropdown(true)} onMouseLeave={() => setOpenDropdown(false)}>
+                <button className="text-sm font-light tracking-wider hover:text-primary transition-colors duration-300 flex items-center gap-1">
+                  Ayyappa Deeksha
+                  <ChevronDown size={16} className={`transition-transform duration-300 ${openDropdown ? 'rotate-180' : ''}`} />
+                </button>
+                {openDropdown && (
+                  <div className="absolute top-full left-0 mt-2 bg-gray-100 rounded-2xl shadow-xl border border-gray-200 min-w-[200px] py-3 animate-fadeInDown">
+                    <Link href="/deeksha" className="block px-6 py-3 text-sm font-serif text-gray-800 hover:text-primary hover:bg-white/50 transition-colors">
+                      Ayyappa Deeksha
+                    </Link>
+                    <Link href="/ashtakam" className="block px-6 py-3 text-sm font-serif text-gray-800 hover:text-primary hover:bg-white/50 transition-colors">
+                      Ashtakam
+                    </Link>
+                    <Link href="/mala-visarjana" className="block px-6 py-3 text-sm font-serif text-gray-800 hover:text-primary hover:bg-white/50 transition-colors">
+                      Mala Visarjana
+                    </Link>
+                    <Link href="/mantra" className="block px-6 py-3 text-sm font-serif text-gray-800 hover:text-primary hover:bg-white/50 transition-colors">
+                      Mantra
+                    </Link>
+                  </div>
+                )}
+              </div>
+              
+              <Link href="/projects" className="text-sm font-light tracking-wider hover:text-primary transition-colors duration-300 relative group">
+                Projects
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <Link href="/healthcare" className="text-sm font-light tracking-wider hover:text-primary transition-colors duration-300 relative group">
+                Healthcare
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <Link href="/gallery" className="text-sm font-light tracking-wider hover:text-primary transition-colors duration-300 relative group">
+                Gallery
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <Link href="/message" className="text-sm font-light tracking-wider hover:text-primary transition-colors duration-300 relative group">
+                Enquiry
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <Link href="/contact" className="text-sm font-light tracking-wider hover:text-primary transition-colors duration-300 relative group">
+                Contact
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-300"></span>
+              </Link>
             </div>
 
             {/* CTA Button & Mobile Menu Toggle */}
@@ -100,18 +145,32 @@ export default function Home() {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden absolute top-20 left-0 right-0 bg-card/95 backdrop-blur-md border-b border-border animate-fadeInDown">
+            <div className="md:hidden absolute top-20 left-0 right-0 bg-white backdrop-blur-md border-b border-border animate-fadeInDown shadow-lg">
               <div className="flex flex-col gap-4 px-4 py-6">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    className="text-sm font-light tracking-wider hover:text-primary transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                <Link href="#home" className="text-sm font-light tracking-wider text-black hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Home</Link>
+                <Link href="#about" className="text-sm font-light tracking-wider text-black hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>About</Link>
+                
+                {/* Mobile Dropdown */}
+                <div>
+                  <button onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)} className="text-sm font-light tracking-wider text-black hover:text-primary transition-colors flex items-center gap-1 w-full">
+                    Ayyappa Deeksha
+                    <ChevronDown size={16} className={`transition-transform duration-300 ${mobileDropdownOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {mobileDropdownOpen && (
+                    <div className="mt-2 ml-4 bg-gray-100 rounded-2xl p-3 space-y-2">
+                      <Link href="/deeksha" className="block px-4 py-2 text-sm font-serif text-gray-800 hover:text-primary transition-colors" onClick={() => { setIsMenuOpen(false); setMobileDropdownOpen(false); }}>Ayyappa Deeksha</Link>
+                      <Link href="/ashtakam" className="block px-4 py-2 text-sm font-serif text-gray-800 hover:text-primary transition-colors" onClick={() => { setIsMenuOpen(false); setMobileDropdownOpen(false); }}>Ashtakam</Link>
+                      <Link href="/mala-visarjana" className="block px-4 py-2 text-sm font-serif text-gray-800 hover:text-primary transition-colors" onClick={() => { setIsMenuOpen(false); setMobileDropdownOpen(false); }}>Mala Visarjana</Link>
+                      <Link href="/mantra" className="block px-4 py-2 text-sm font-serif text-gray-800 hover:text-primary transition-colors" onClick={() => { setIsMenuOpen(false); setMobileDropdownOpen(false); }}>Mantra</Link>
+                    </div>
+                  )}
+                </div>
+                
+                <Link href="/projects" className="text-sm font-light tracking-wider text-black hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Projects</Link>
+                <Link href="/healthcare" className="text-sm font-light tracking-wider text-black hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Healthcare</Link>
+                <Link href="/gallery" className="text-sm font-light tracking-wider text-black hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Gallery</Link>
+                <Link href="/message" className="text-sm font-light tracking-wider text-black hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Enquiry</Link>
+                <Link href="/contact" className="text-sm font-light tracking-wider text-black hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Contact</Link>
               </div>
             </div>
           )}
