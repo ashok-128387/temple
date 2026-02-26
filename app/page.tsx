@@ -83,12 +83,13 @@ export default function Home() {
               
               {/* Ayyappa Deeksha Dropdown */}
               <div className="relative" onMouseEnter={() => setOpenDropdown(true)} onMouseLeave={() => setOpenDropdown(false)}>
-                <button className="text-sm font-light tracking-wider hover:text-primary transition-colors duration-300 flex items-center gap-1">
+                <button className="text-sm font-light tracking-wider hover:text-primary transition-colors duration-300 flex items-center gap-1 relative group">
                   Ayyappa Deeksha
                   <ChevronDown size={16} className={`transition-transform duration-300 ${openDropdown ? 'rotate-180' : ''}`} />
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-300"></span>
                 </button>
                 {openDropdown && (
-                  <div className="absolute top-full left-0 mt-2 bg-gray-100 rounded-2xl shadow-xl border border-gray-200 min-w-[200px] py-3 animate-fadeInDown">
+                  <div className="absolute top-full left-0 mt-2 bg-gray-100 rounded-2xl shadow-xl border border-gray-200 min-w-[200px] py-3 animate-fadeInDown z-50">
                     <Link href="/deeksha" className="block px-6 py-3 text-sm font-serif text-gray-800 hover:text-primary hover:bg-white/50 transition-colors">
                       Ayyappa Deeksha
                     </Link>
