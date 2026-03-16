@@ -45,7 +45,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <img 
-              src="/temple/565090714_18080753051283913_5599229946113706496_n.jpg" 
+              src="/temple/download.png" 
               alt="Ayyappa Seva Logo" 
               className="w-12 h-12 rounded-full object-cover transform group-hover:scale-110 transition-transform duration-300 border-2 border-primary"
             />
