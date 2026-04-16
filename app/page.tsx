@@ -621,14 +621,14 @@ export default function Home() {
                 <span className="text-2xl">📍</span>
               </div>
               <h3 className="font-serif font-bold text-foreground mb-2">Location</h3>
-              <p className="font-light text-muted-foreground">123 Spiritual Lane<br/>Divine City, ST 12345</p>
+              <p className="font-light text-muted-foreground">No. 1, 2nd Floor, Canara Bank Colony Bus Stop,<br/>Opp. Shanthi Sagar Hotel, Uttarahalli Main Rd,<br/>Bengaluru, Karnataka 560061</p>
             </div>
             <div className="text-center animate-slideUp" style={{ animationDelay: '0.1s' }}>
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">📞</span>
               </div>
               <h3 className="font-serif font-bold text-foreground mb-2">Contact</h3>
-              <p className="font-light text-muted-foreground">(555) 123-4567<br/>contact@ayyappa.org</p>
+              <p className="font-light text-muted-foreground">+91 9113676485<br/>+91 79960 51545</p>
             </div>
             <div className="text-center animate-slideUp" style={{ animationDelay: '0.2s' }}>
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">

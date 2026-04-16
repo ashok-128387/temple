@@ -94,9 +94,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold text-foreground mb-2">Address</h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        No. 1, 2nd Floor, Canara Bank Colony Bus Stop,<br/>
-                        Opp. Shanthisagar Hotel, Uttarahalli Main Road,<br/>
-                        Bangalore – 560061
+                        RNR Global Academy, No. 1, 2nd Floor,<br/>
+                        Opp. Shanthi Sagar Hotel, Uttarahalli Main Rd,<br/>
+                        Canara Bank Colony, Bengaluru,<br/>
+                        Karnataka 560061
                       </p>
                     </div>
                   </div>
